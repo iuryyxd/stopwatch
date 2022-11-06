@@ -39,6 +39,7 @@ function startStopTimer(){
             }
         }, 1000);
 
+        playStopButton.setAttribute("disabled", true)
         playStopButton.classList.add("active")
         pauseButton.classList.remove("active")
     
@@ -50,6 +51,7 @@ function pauseTimer() {
 
         playStopButton.classList.remove("active")
         pauseButton.classList.add("active")
+        playStopButton.removeAttribute("disabled")
     }
 }
 
@@ -61,6 +63,8 @@ function resetTimer(){
     hourText.innerHTML = "0" + hour
     minText.innerHTML = "0" + min
     secText.innerHTML = "0" + sec
+
+    playStopButton.removeAttribute("disabled")
 }
 
 resetButton.addEventListener("click", resetTimer)
