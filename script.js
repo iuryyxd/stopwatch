@@ -45,10 +45,12 @@ function startStopTimer(){
 }
 
 function pauseTimer() {
-    isRunning = false
+    if(isRunning == true) {
+        isRunning = false
 
-    playStopButton.classList.remove("active")
-    pauseButton.classList.add("active")
+        playStopButton.classList.remove("active")
+        pauseButton.classList.add("active")
+    }
 }
 
 function resetTimer(){
