@@ -54,9 +54,16 @@ body {
     transition: .1s all;
 }
 
+
 .btn:hover {
     outline: 1px solid #a744d4;
 }
+
+.btn.pause.active {
+    background: #c7b6d4;
+}
+
+
 
 .play-stop {
     background: #560b79;
@@ -70,6 +77,10 @@ body {
     border: none;
     cursor: pointer;
     transition: .1s all;
+}
+
+.play-stop.active {
+    background: #2b033d;
 }
 
 .play-stop:hover {

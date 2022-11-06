@@ -38,11 +38,17 @@ function startStopTimer(){
                 clearInterval(counter)
             }
         }, 1000);
+
+        playStopButton.classList.add("active")
+        pauseButton.classList.remove("active")
     
 }
 
 function pauseTimer() {
     isRunning = false
+
+    playStopButton.classList.remove("active")
+    pauseButton.classList.add("active")
 }
 
 function resetTimer(){
