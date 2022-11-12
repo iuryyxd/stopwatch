@@ -10,8 +10,8 @@ let sec = 0, min = 0, hour = 0, isRunning = false, timer, counter;
 
 function startStopTimer(){
 
-    isRunning = true
-
+   
+    if(!isRunning) {
     counter = setInterval(() => {
             sec++
             if(sec == 60) {
@@ -42,6 +42,9 @@ function startStopTimer(){
         playStopButton.setAttribute("disabled", true)
         playStopButton.classList.add("active")
         pauseButton.classList.remove("active")
+    }
+        isRunning = true
+    
     
 }
 
